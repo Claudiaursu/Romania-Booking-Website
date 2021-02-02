@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Users</title>
+
+    <%- include("../fragments/head") %>
+</head>
+<body>
+
+<header>
+    <%- include("../fragments/header") %>
+</header>
+<main>
+    <h1>Users</h1>
+    <section>
+        <table id = "users_table">
+            <thead>
+                <tr>
+                   <th>Username</th>
+                   <th>Name</th>
+                   <th>Role</th> 
+                   <th>Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+        <% for(var i = 0; i< locals.useri.length; i++) { %>
+            <% if(locals.utilizator.username != useri[i].username){ %>
+            <tr>
+            <td><%= useri[i].username %></td>
+            <td><%= useri[i].nume + " " + useri[i].prenume[0] + "." %></td>
+            <td><%= useri[i].rol %></td>
+            <td id = "butoane_form">
+                <form action= "/promoveaza" method = "post">
+                    <input type="hidden" name = "id" value = "<%=useri[i].id_utilizator%>">
+                    <input class = "prom_dem" type = "submit" value = "Promote">
+                </form>
+                <form action = "/retrogradeaza" method = "post">
+                    <input type="hidden" name = "id" value = "<%=useri[i].id_utilizator%>">
+                    <input class = "prom_dem" type = "submit" value = "Demote">
+                </form>
+                <form action = "/schimba_rol" method = "post">
+                    <input type="hidden" name = "id" value = "<%=useri[i].id_utilizator%>">
+                    <input type="hidden" name = "role" value = "<%=useri[i].rol%>">
+                    <input class = "prom_dem" type = "submit" value = "Promote/Demote">
+                </form>
+            </td>
+            </tr>
+            <% } %>
+        <% } %>
+            </tbody>
+        </table>
+    </section>
+
+</main>
+
+<footer>
+    <%- include("../fragments/footer") %>
+</footer>
+</body>

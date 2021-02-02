@@ -1,0 +1,42 @@
+@mixin liDetails {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav{
+    position: fixed;
+    background-color: var(--navColor);
+}
+span#hamburger:hover{
+    ul.menu{
+        display: block;
+    }
+}
+ul.menu{
+    display: none;
+    >li#homeButton{
+        display: none;
+    }
+    >li{
+        --inaltime:3rem;
+        font-family: navFont;
+        font-size: 2rem;
+        font-weight: bold;
+        color: palegreen;
+        display: inline-block;
+        height: var(--inaltime);
+        line-height: var(--inaltime); 
+        transition: background 0.7s linear;
+        position: relative;
+        @include liDetails();
+    }
+    >a{
+        text-decoration: none;
+        list-style-type: none;
+        color:var(--navTextColor);
+        font-weight: bold;
+        font-family: navFont;
+        padding-left: 0px;
+    }
+
+}

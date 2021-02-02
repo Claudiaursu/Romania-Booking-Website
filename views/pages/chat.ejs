@@ -1,0 +1,91 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<%- include("../fragments/head") %>
+	<title>Chat</title>
+	<script type="text/javascript" src="/node_modules/socket.io-client/dist/socket.io.js"></script> 
+	<script>port=<%= locals.port %></script>
+    
+    <script>
+	
+	socketUrl = "../../";  
+	if(document.location.href.indexOf("localhost") != -1) {  
+		socketUrl = "http://127.0.0.1:"+port;
+	}
+	//const socket = io(socketUrl,{reconnect: true});  
+	socket = io();
+	socket.on("mesaj_nou", function(nume, culoare, culoare_fundal, mesaj, poza, ora) {  
+	
+		var chat=document.getElementById("mesaje_chat");
+		chat.innerHTML+=`<img class = "profile_pic" src="${poza}"> (${ora}) <p>${nume} : <span style='color:${culoare};background:${culoare_fundal}'>${mesaj}</span> `;
+		
+		//ca sa scrolleze la final
+		chat.scrollTop=chat.scrollHeight;
+	});
+	
+	function trimite(){
+		var culoare = document.getElementById("culoare").value;
+        var nume = document.getElementById("nume").value;
+        var culoare_fundal = document.getElementById("culoare_fundal").value;
+		var mesaj = document.getElementById("mesaj").value;
+		var poza = document.getElementById("poza_profil").value;
+		
+		// <form action="/mesaj" enctype="application/x-www-form-urlencoded" method="post"
+		/*
+parmas e echivalent cu tagurile input nume=val&nume=val
+		*/
+		var http = new XMLHttpRequest();
+		var url = '/mesaj';
+		var params = `culoare=${culoare}&nume=${nume}&mesaj=${mesaj}&culoare_fundal=${culoare_fundal}&poza_profil=${poza}`;
+		http.open('POST', url, true);
+
+		
+		http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+		
+		/*
+		http.onreadystatechange = function() {
+			if(http.readyState == 4 && http.status == 200) {
+				//alert(http.responseText);
+			}
+		}*/
+		http.send(params);
+    }
+
+	</script>
+	</head>
+	<body>
+		<header>
+			<%- include("../fragments/header") %>
+		</header>
+		<h1>Beautiful Romania Chat!</h1>
+		<div id="chat">
+			<div id="mesaje_chat">
+            </div>
+			<input type="hidden" id = "poza_profil" name = "poza_profil" value = "<%=locals.utilizator.poza%>">
+            <label>
+            Name: <input type="text" id="nume" name="nume" value="<%=locals.utilizator.username%>">
+            </label><br/>
+            <label>
+            Message: <textarea id="mesaj" name="mesaj" value=""></textarea>
+            </label><br/>
+            <label>Text Color: 
+                <select id="culoare" name="culoare">
+                    <option value="red">red</option>
+                    <option value="green">green</option>
+                    <option value="blue">blue</option>
+                </select>
+            </label><br/>
+            <label>
+                Background Color:
+                <select id ="culoare_fundal" name = "culoare_fundal">
+                    <option value="pink">pink</option>
+                    <option value="green">green</option>
+                    <option value="purple">purple</option>
+                </select>
+            </label>
+            <button onclick="trimite()">Send</button>
+
+		</div>
+
+	</body>
+</html>

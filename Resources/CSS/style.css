@@ -1,0 +1,973 @@
+@font-face{
+    font-family: navFont;
+    src: url(../fonts/RainbowUniverse.ttf);
+   }
+   @font-face {
+       font-family: mainTitleFont;
+       src: url(../fonts/SCRIPTIN.ttf);
+   }
+
+   html{
+    font-size: 15px;
+    }
+    
+    body.light{
+    --backgroundImage: url(../Images/home/whiteRock2.jpg);
+    --bigImage: url(../Images/home/greenGrass3.jpg);
+    background-image: var(--backgroundImage); 
+    background-size: auto; 
+    counter-reset: green_p 0;
+    --navColor: green;
+    --navTextColor:rgb(180, 248, 79);
+    --subtitleColor: rgb(2, 90, 2);
+    --subtitleColor2: rgb(76, 141, 11);
+    --lightDarkButton:rgb(135, 42, 189);
+    }
+
+    body.dark{
+    --backgroundImage: url(../Images/home/dark2.jpg);
+    --bigImage: url(../Images/home/white.jpg);
+    background-image: var(--backgroundImage);
+    background-size: auto; 
+    counter-reset: green_p 0;
+    --navColor: rgb(114, 209, 37);
+    --navTextColor:rgb(30, 49, 1);
+    --subtitleColor: rgb(66, 252, 150);
+    --subtitleColor2: rgb(170, 245, 96);
+    --lightDarkButton:rgb(201, 167, 240);
+    }
+
+   .fundal{
+    background-image: var(--bigImage);
+    position: relative;
+    min-height: 30rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+   .text-fundal{
+    position: absolute;
+    font-family: mainTitleFont;
+    color: black;
+    font-size: 2rem;
+    top:7%;
+    left:50%;
+   }
+
+
+   .green{
+    color:black;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    text-align: justify;
+    padding: 1rem;
+    background-color: rgb(198, 238, 159);
+    border-radius: 1rem;     
+    margin: 1rem;
+    padding: 0.2rem;
+
+   }
+   .green2{
+    color:black;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    text-align: justify;
+    padding: 1rem;
+    background-color: rgb(166, 233, 160);
+    border-radius: 0.9rem;     
+    margin: 1rem;
+
+   }
+
+   .blue{
+       background-color: rgb(182, 221, 211);
+        color:black;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 1.1rem;
+        text-align: justify;
+        padding: 1rem;
+        border-radius: 0.9rem;     
+        margin: 1rem;
+
+   }
+
+   .pink {
+    background-color: rgb(233, 184, 238);
+    color:black;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    text-align: justify;
+    padding: 1rem;
+    border-radius: 1rem;     
+    margin: 1rem;
+    }
+
+    .pink2{
+    color:black;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    text-align: justify;
+    padding: 1rem;
+    background-color: rgb(230, 132, 230);
+    border-radius: 0.9rem;     
+    margin: 1rem;
+    }
+ 
+   p{
+    font-family:Arial, Helvetica, sans-serif;
+   }
+   picture{
+       display: inline-block;
+       margin: 1rem;
+   }
+   picture:hover{
+    box-shadow: grey;
+    transform: translate(0, -4%);
+    transition: all 1s;
+   }
+
+   main{
+    padding-left:2.2em;
+    padding-right:2.2em;
+   }
+
+    main#home_page{
+        padding-left:2.2em;
+        padding-right:2.2em;
+      
+        display:grid;
+
+        grid-template-columns: 20% 30% 25% 25%;
+        grid-template-areas: 
+        "pictures      travel-guides  travel-guides get-started"
+        "offers-table    offers-table   description        contact  "
+        "regions-title regions-title regions-title regions-title"
+        "regions      regions       regions        regions"
+        "about-video  about-video   did-you-know   did-you-know";
+    }
+  
+    #description{
+        grid-area: description;
+    }
+    #travel-guides{
+        grid-area: travel-guides;
+    }
+    #about-video{
+        grid-area: about-video;
+    }
+    #regions{
+        grid-area: regions;
+    }
+    #pictures{
+        grid-area: pictures;
+    }
+    #get-started{
+        grid-area: get-started;
+    }
+    #did-you-know{
+        grid-area: did-you-know;
+    }
+    #offers-table{
+        grid-area: offers-table;
+    }
+    #contact{
+        grid-area: contact;
+    }
+    #regions-title{
+        grid-area: regions-title;
+    }
+    #regions{
+        display:flex;
+        background-image: url('../Images/home/Lacul-Rosu.jpg');
+        background-attachment:fixed;
+        background-size:cover;
+        background-position:center center;
+        flex-wrap:wrap;
+        border: olivedrab 0.3rem solid;
+        border-radius: 0.5rem;
+        box-sizing: border-box;
+    }
+    #regions>section{
+        flex-basis:0;
+        flex-grow:1;
+        background:rgba(200, 241, 166, 0.747);
+        margin-bottom:0;
+        padding:0.4em;
+      }
+
+   
+    
+    h1{
+    text-align: center;
+    color: var(--subtitleColor);
+    font-family: mainTitleFont;
+    font-size: 3rem;
+   } 
+
+   th,td{
+    border:1px solid black;
+        padding:0.3rem;
+    }
+    td:empty{
+        padding:1.3rem;
+    }
+
+    div#tabel{
+        
+        width: 100%;
+    } 
+
+    div#tabel>table{
+        background-color: rgb(186, 213, 235);
+        border-collapse:collapse;
+        empty-cells:show;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        margin: 1.3rem;
+        border: 2px rgb(87, 0, 87) solid;
+        width: 80%;
+        box-sizing: border-box;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .special{
+        color: tomato;
+        text-decoration: underline;
+        text-decoration-color: violet;
+        font-weight: bold;
+    }
+
+   #navTitle{
+    font-family: mainTitleFont;
+    color: rgb(180, 248, 79);
+    font-size: 35px;
+    display: inline-block;
+    font-weight: bold;
+   }
+   .subtitle{
+    font-family: 'Nerko One', cursivenav;
+    color: var(--subtitleColor);
+    font-size: 2.5rem;
+    text-align: left;
+    margin-left: 1rem;
+   }
+
+   .footer-details {
+       text-align: center;
+       background-color: transparent;
+   }
+   .contact-details{
+    text-align: left;
+    background-color: transparent;
+    line-height:0.8rem ;
+   }
+   ul.blue>li{
+    color:black;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    text-align: left;
+    margin: 0.5rem;
+   }
+   figcaption,q,cite{
+    color:black;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-align: left;
+   }
+   
+   b{
+       color: var(--subtitleColor2);
+       font-family: navFont;
+       font-size: 1,3rem;
+   }
+   h3{
+        color:var(--subtitleColor2);
+        font-family: 'Nerko One', cursive;
+        font-size: 2.1rem;
+        text-align: left;
+        /*
+        margin-left: 50px;
+        margin-right: 50px;
+        */
+        margin: 0.9rem;
+
+   }
+
+   address{
+    margin-left: 0.5rem;
+   }
+   
+   figcaption{
+    text-align: center;
+    font-style: oblique;
+    font-family: 'Nerko One', cursive;
+    font-weight: bold;
+    color:var(--subtitleColor);
+   }
+
+   #gr{
+    display: grid;
+    grid-template-columns:repeat(4,1fr);    
+    grid-row-gap: 0.5em;
+    grid-column-gap: 0.5em;
+   }
+
+  
+   #gr>figure:nth-child(6){
+       grid-area: 2/4/3/5;
+   }
+   #gr>figure:nth-child(7){
+    grid-area: 3/1/4/2;
+   }
+   #gr>figure:nth-child(8){
+        grid-area: 3/2/4/3;
+    }
+    #gr>figure:nth-child(9){
+        grid-area: 3/3/4/4;
+    }
+    #gr>figure:nth-child(10){
+        grid-area: 3/4/4/5;
+    }
+
+   #gr figcaption{
+    text-align: center;
+    font-style: oblique;
+    font-family: 'Nerko One', cursive;
+    font-weight: bold;
+    background-color: thistle;
+    color: rgb(70, 138, 25);
+    transition: all 1.25s linear;
+   }
+   #gr img{
+       width: 100%;
+       height:100%;
+       
+   }
+   
+   #gr figure{
+    transform-origin:50% 100%;
+   }
+
+   #gr figure:hover {
+       background-color: teal;
+       transform:  scale(1.3);
+       transition: all 1.25s linear;
+    
+       }
+
+    #gr figure:hover figcaption{
+        color: tomato;
+        background-color: rgb(182, 223, 100);
+
+   }
+   #about-video{
+       width: 100%;
+       box-sizing: border-box;
+   }
+
+   video{
+       width: 100%;
+       height: auto;   
+       margin-left: 1rem;
+       margin-right: 1rem;
+      
+   }
+
+   div#pictures{
+       border: 1px transparent;
+       box-sizing: border-box;
+       width: 95%;
+   }
+
+ 
+
+   div#pictures>picture>img{
+       width: 90%;
+   }
+
+   ::cue{
+       background-color:var(--navColor);
+       color: ivory;
+       text-align: left;
+       margin-left: 0px;
+       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   }
+
+   div#banner{
+       margin: 50px;
+       color: lightsalmon;
+       background-color: lightseagreen;
+       text-decoration: wavy;
+       font-size: 40px;
+       border-color: mediumorchid;
+       border-width: 10px;
+       border-radius: 6px;
+       text-align: center;
+       font-weight: bold;
+       background-image: url(../Images/home/bigstar.gif);
+       background-size: 1% auto;
+       background-repeat: repeat;
+       -webkit-text-stroke: 2px rgb(243, 35, 208);
+       animation-name: banner;
+       animation-duration: 6s;
+       animation-play-state: running;
+       animation-iteration-count: 1;
+       animation-fill-mode: forwards;
+       position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+       
+   }
+
+   @keyframes banner{
+        25%{
+            transform: translateY(-20px);
+        }
+        50%{
+            transform: translateY(0px);
+            color: rgb(148, 8, 97);
+        }
+        99.999%{
+            transform: translateY(0px);
+            opacity: 1;
+        }
+        100%{
+             opacity: 0; 
+        }
+   }
+
+  
+   body p.green:nth-child(n+2)::before{
+       counter-increment: green_p;
+        content: counter(green_p)"# ";   
+    }
+/*
+    #container_animatie{
+        
+    }
+
+  */  
+  *{
+    margin:0;
+    padding:0;
+    }
+    
+
+    .galerie{
+        width: 300px;
+        height: 300px;
+        border: 20px solid transparent;
+        border-image: url('/Images/dynamic_gallery/yellow.jpg') 30 stretch; 
+       /* border-image: url('http://irinaciocan.ro/imagini/backgr2.png') 30 stretch; */
+        position:relative;
+        overflow:hidden;
+        margin-bottom:5rem;
+        margin: auto;
+    }
+
+    div#galerie1{
+        margin-top: 3rem;
+    }
+
+    div#galerie1 figure:hover{
+        -webkit-animation-play-state:paused;
+        -moz-animation-play-state:paused;
+        -o-animation-play-state:paused;
+        animation-play-state:paused;
+        cursor: pointer;
+      }
+    .galerie figcaption{
+        position:absolute;
+        bottom:0;
+        background:rgba(255,255,255,0.7);
+        width:100%;
+        text-align:center;
+    }
+    .galerie figure{
+        position:relative;
+        
+    }
+    
+    
+    #galerie1 figure>img{
+        width: 100%;
+        height: 100%;
+    }
+
+    #galerie1 figure{	
+        position:absolute;
+        left:0;
+        top:0;
+        z-index:0;
+        animation-name:gal_exemplu;
+        animation-timing-function:linear;
+        animation-iteration-count:infinite;
+        animation-fill-mode:forwards;
+        animation-duration:30s;	
+        transform-origin:0px center;
+    }
+    div#galerie1 figure:nth-of-type(10) {
+        animation-delay: 0s;
+    }
+    
+    div#galerie1 figure:nth-of-type(9) {
+        animation-delay: 3s;
+    }
+    
+    div#galerie1 figure:nth-of-type(8) {
+        animation-delay: 6s;
+    }
+    
+    div#galerie1 figure:nth-of-type(7) {
+        animation-delay: 9s;
+    }
+    
+    div#galerie1 figure:nth-of-type(6) {
+        animation-delay: 12s;
+    }
+    
+    div#galerie1 figure:nth-of-type(5) {
+        animation-delay: 15s;
+    }
+    
+    div#galerie1 figure:nth-of-type(4) {
+        animation-delay: 18s;
+    }
+    
+    div#galerie1 figure:nth-of-type(3) {
+        animation-delay: 21s;
+    }
+    
+    div#galerie1 figure:nth-of-type(2) {
+        animation-delay: 24s;
+    }
+    
+    div#galerie1 figure:nth-of-type(1) {
+        animation-delay: 27s;
+    }
+    /*cum calculam timpii:
+      100%..... 30s
+    x%........3s      => pana la 10% e gata decuparea pt prima poza
+    
+    */
+    
+    @keyframes gal_exemplu{ 
+        0% {z-index:10;opacity:1;} /*perioada 0-5% in care se afiseaza fara efect */
+        1%{
+            clip-path:polygon(0 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 50%, 100% 50%,100% 50% );
+        }
+        3.3%{
+            clip-path: polygon(0 33.33%, 0 0, 100% 0, 100% 100%, 0 100%, 0 66.66%, 100% 66.66%, 100% 33.33% );
+            
+        } 
+        6.6%{
+            clip-path: polygon(0 0,0 0, 100% 0,100% 100%, 0 100%,0 100%, 100% 100%, 100% 0);
+        }
+        10%{
+            z-index:-10;
+            clip-path:polygon(0 50%, 0 0, 100% 0, 10% 100%, 0 100%, 0 50%, 100% 50%,100% 50% );
+
+        }
+        90%{
+            z-index:-10;
+            opacity: 1;
+        }
+        90.01%{
+            z-index:-10;
+            clip-path:polygon(0 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 50%, 100% 50%,100% 50% );
+            opacity: 1;
+        }
+        90.02%{
+            z-index: 0;
+        }
+        100%{
+            opacity: 1;
+            z-index: 0;
+        }
+    }
+
+
+    
+tbody>tr:nth-child(even){
+    background-color: thistle;
+}
+
+
+tbody>tr:nth-child(odd){
+    background-color: rosybrown;
+}
+
+tbody>tr:hover {
+    background-color: lightseagreen;
+}
+
+/* unde avem rowspan pun la loc culoarea initiala */
+tbody>tr:hover td[rowspan]{
+    background-color:rosybrown;
+}
+
+#link-top{
+    position:fixed;
+    bottom:0.3em;
+    opacity:0.6;
+    left:0.3em;
+    width:3rem;
+    box-sizing: border-box;
+    height:3rem;
+    line-height:3rem;
+    text-align:center;
+    border:2px solid rgb(61, 167, 0);
+    border-radius:50%;
+    background: rgb(132, 212, 79);
+  }
+  #link-top:hover{
+    background: hotpink;
+    transition: all 0.3s;
+    opacity: 1;
+  }
+
+#sageata{ 
+
+    font-size: 2rem;
+    color: rgb(104, 32, 32);
+
+}
+
+video{
+    margin: 1rem;
+}
+
+.video{
+    width: 70%;
+}
+
+@media print{
+    video{
+        display: none;
+    }
+    audio{
+        display: none;
+    }
+    footer>div#banner{
+        animation-play-state: paused;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    body{
+        background-color: rgb(155, 199, 88);
+    }
+    a#link-top{
+        display: none;
+    }
+}
+
+
+#light_dark{
+    position:fixed;
+    bottom:0.3em;
+    opacity:0.8;
+    right:0.3em;
+    width:3.7rem;
+    height: 3.7rem;   
+    border:3px solid rgb(61, 167, 0);
+    color: black;
+    font-size: 1rem;
+    background-color: var(--lightDarkButton);
+}
+
+/*Stilizare pagina holeturi */
+main#hotels_page{
+    display: block;
+    margin: 2rem;
+}
+
+#gr_hotels{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+/* Stilizare caseta hotel */
+
+main#hotels_page article.hotel{
+    border: 0.4rem olivedrab solid;
+    border-radius: 1rem;
+    background-color: peachpuff;
+    margin: 2rem;
+    box-sizing: border-box;
+} 
+
+div#container_hotel{
+    display: grid;
+    grid-template-columns: 55% 45%;
+    box-sizing: border-box;
+}
+
+article.hotel:hover{
+    box-shadow: 10px 10px 30px orchid;   
+}
+
+div.details_col>img{
+    margin: 1.2rem;
+    width: 75%;
+}
+
+div.details_col{
+    box-sizing: border-box;
+}
+
+h3.titlu_hotel{
+    font-family: 'Nerko One', cursive;
+    font-size: 2rem;
+    text-decoration: wavy;
+    color: rgb(2, 90, 2);
+    text-align: center;
+}
+
+div.details_col li{
+    color:black;
+    font-family: 'Nerko One', cursive;
+    font-size: 1.2rem;
+    list-style-type: none;
+    margin: 0.5rem;
+    margin-left: 1.2rem;
+}
+
+div.details_col li>b{
+    font-weight: bold;
+    color: var(--navColor);
+    font-family: 'Nerko One', cursive;
+    font-size: 1.3rem;
+}
+
+div#input_gr{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+section#inputs{
+    background-color: thistle;
+    margin: 2rem;
+    border-radius: 1rem;    
+}
+section#inputs label,p,select>option{
+    color: black;
+    font-size: 1.3rem;
+    font-family: 'Nerko One', cursive;
+}
+section#inputs>h2{
+    color: var(--navColor);
+    font-size: 1.7rem;
+    font-family: 'Nerko One', cursive;
+}
+
+button.filter_buttons{
+    background-color: chartreuse;
+    color: darkmagenta;
+    font-size: 1.5rem;
+    font-family: 'Nerko One', cursive;
+    border: chartreuse 3px solid;
+    border-radius: 15px;
+    width: auto;
+    margin: 0.15rem;
+}
+
+button.filter_buttons:hover{
+    background-color: rgb(102, 192, 12);
+    cursor: pointer;
+}
+
+section#average_zone{
+    background-color: thistle;
+    margin: 2rem;
+    border-radius: 1rem;  
+    
+}
+
+#login1{
+    font-size: 1.7rem;
+    background-color: rgb(212, 181, 219);
+    border-top: 2px chartreuse;
+    border-right: 2px chartreuse;
+    border-bottom: 2px chartreuse;
+    border-radius: 5px;
+    padding: 0.2rem;
+    position: absolute; 
+    top:0%;
+    left:0%;
+}
+#login1 label{
+    color: var(--subtitleColor);
+}
+#login1 input[type = "submit"]{
+    background-color: rgb(167, 253, 81);
+    color: darkmagenta;
+    font-size: 1.2rem;
+    font-family: 'Nerko One', cursive;
+    border: chartreuse 2px solid;
+    border-radius: 1rem;
+    width: auto;
+    margin: 0.15rem;
+}
+
+#login1 input[type = "submit"]:hover{
+    background-color: rgb(121, 190, 52);
+}
+
+#login1 input{
+    background-color: rgb(206, 231, 225);
+    color: black;
+    font-size: 1.2rem;
+    font-family: 'Nerko One', cursive;
+    border: rgb(229, 161, 231) 2px solid;
+}
+
+/*
+.logged_any_page{
+    font-size: 1.7rem;
+    color:darkmagenta;
+    background-color: rgb(212, 181, 219);
+    border-top: 2px chartreuse;
+    border-right: 2px chartreuse;
+    border-bottom: 2px chartreuse;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 0.2rem;
+} */
+#login2{
+    font-size: 1.7rem;
+    background-color: rgb(212, 181, 219);
+    border-top: 2px chartreuse;
+    border-right: 2px chartreuse;
+    border-bottom: 2px chartreuse;
+    border-radius: 5px;
+    padding: 0.2rem;
+    position: absolute;
+}
+#login2 label{
+    color: var(--subtitleColor);
+}
+#login2 input[type = "submit"]{
+    background-color: rgb(167, 253, 81);
+    color: darkmagenta;
+    font-size: 1.2rem;
+    font-family: 'Nerko One', cursive;
+    border: chartreuse 2px solid;
+    border-radius: 1rem;
+    width: auto;
+    margin: 0.15rem;
+}
+
+#login2 input[type = "submit"]:hover{
+    background-color: rgb(121, 190, 52);
+}
+
+#login2 input{
+    background-color: rgb(206, 231, 225);
+    color: black;
+    font-size: 1.2rem;
+    font-family: 'Nerko One', cursive;
+    border: rgb(229, 161, 231) 2px solid;
+}
+
+/*poza de profil*/
+img.profile_pic{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 4px;
+}
+div#profile_section{
+    color: rgb(125, 226, 43);
+    background-color: rgb(197, 150, 209);
+    position: absolute; 
+    top:0%;
+    right:0%;
+    border-radius: 4px solid rgb(103, 12, 131);
+}
+
+#users_table{
+    margin-left:auto; 
+    margin-right:auto;
+    font-size: 1.5rem;
+    font-family: 'Nerko One', cursive;
+    border-collapse: collapse;
+}
+#users_table th{
+    background-color: rgb(165, 55, 147);
+    color: rgb(61, 167, 0);
+    text-shadow:1px 2px yellowgreen;
+    font-size: 1.6rem;
+    font-family: 'Nerko One', cursive;
+   
+}
+#users_table td{
+    color: darkmagenta;
+    background-color: plum;
+    font-size: 1.3rem;
+    font-family: 'Nerko One', cursive;
+}
+#users_table tbody>tr:hover {
+    background-color: lightseagreen;
+}
+
+input.prom_dem{
+    color: var(--navColor);
+    background-color: cadetblue;
+    font-size: 1.5rem;
+    font-family: 'Nerko One', cursive;
+    border-radius: 5px;
+}
+
+input.prom_dem:hover{
+    background-color: rgb(199, 88, 139);
+}
+
+#butoane_form{
+    display: flex;
+}
+#butoane_form form{
+	margin:0.2rem;
+}
+
+#inregistrare p{
+    margin-left: auto;
+    margin-right: auto;
+}
+.afisaj{
+	border:1px solid grey;
+	border-radius:20px;
+	padding:10px;
+}
+#mesaje_chat{
+    border:1px solid black;
+    height:30rem;
+    overflow:auto;
+    width:30rem;
+    background-color: rgb(233, 198, 186);
+    border-radius: 5px solid blue;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+input#nume{
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: 'Nerko One', cursive;
+    border-radius: 5px;
+}
+textarea#mesaj{
+    height:8rem;
+    overflow:auto;
+    width:16rem;
+    font-size: 1rem;
+    font-family: 'Nerko One', cursive;
+}
+div#chat{
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,202 @@
+html{
+    font-size: 13px;
+}
+
+body{
+    background-image: url(../Images/home/whiteRock2.jpg) ;
+    background-size: auto;
+    margin:0;
+ }
+ #gr{
+    display: grid;
+    grid-template-columns:repeat(2,1fr);    
+   }
+
+   #gr>figure:nth-child(6){
+        grid-area: auto;
+    }
+    #gr>figure:nth-child(7){
+    grid-area: auto;
+    }
+    #gr>figure:nth-child(8){
+        grid-area: auto;
+    }
+    #gr>figure:nth-child(9){
+        grid-area: auto;
+    }
+    #gr>figure:nth-child(10){
+        grid-area: auto;
+    }
+    div#banner{
+        display: none;
+     }
+         
+*{ /* resetarea spatierilor */
+    margin:0px;
+    padding:0px;
+    text-indent:0px;
+}
+
+
+label#hamburger{
+    display: none;
+}
+
+ul.menu > li#homeButton {
+    display: none;
+    text-shadow: none;
+}
+
+ul.submenu{
+    display:none;
+}
+
+nav{
+    width:100%;
+    background-color: var(--navColor);
+}
+
+ul.menu>li, ul.menu>li#homeIcon{
+ /* float:left; */
+    display: inline-block;
+    width:18%;
+    text-shadow: 0px -40px 5px rgb(15, 83, 15);
+    list-style-type:none;
+    font-family: navFont;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color:var(--navTextColor);
+    text-align:center;
+    height:3rem;
+    line-height: 3rem; 
+    transition: all 0.3s linear;
+    overflow: hidden; 
+}
+ul.menu>li#homeIcon{
+    width: 8%;
+}
+
+ul.menu>li>ul.submenu>li{
+    display:block;
+    font-size:1.2rem;
+    font-weight:bold;
+    width:100%;
+    height:3rem;
+    line-height:3rem;
+    text-align:center;		
+    list-style-type:none;
+    text-shadow: none;
+}
+ul.menu>li>a,ul.menu>li>div,ul.submenu>li>a{
+    display:block;
+    height:	100%;
+    width: 100%;
+    text-decoration: none;
+    list-style-type: none;
+    color:var(--navTextColor);
+    font-weight: bold;
+    font-family: navFont;
+}
+
+ul.menu>li>ul.submenu{
+    position: absolute;
+     /* top:0px; */
+    display: none;
+    z-index: 100;
+    width: 18%;
+}
+
+ul.menu>li>ul.submenu>li
+{
+    border-top:1px solid black;
+    background-color: var(--navColor);
+}
+ul.menu>li>ul.submenu>li:last-child
+{
+    border-bottom:1px solid black;
+}
+
+ul.menu>li>a:hover, ul.submenu>li>a:hover{
+    background-color: rgb(107, 185, 33);
+    transition: all 0.3s linear;
+}
+ul.submenu>li>a:hover{
+    text-decoration: underline;
+}
+
+
+ul.menu>li:hover{
+   /* overflow:visible; */
+   background-color: rgb(107, 185, 33);
+    transition: all 0.3s linear;
+    text-shadow: 0px 0px 5px rgb(15, 83, 15);
+}
+
+ul.menu>li:hover ul.submenu{
+    display: block;
+}
+
+audio{
+    width: 20rem;
+    height: 3rem;
+}
+
+#regions{
+    background-image: url('../Images/home/Lacul-Rosu.jpg');
+    background-attachment:fixed;
+    background-size:cover;
+    background-position:center center;
+    border: olivedrab 0.3rem solid;
+    border-radius: 0.5rem;
+    display: block;
+}
+#tabel{
+    box-sizing: border-box;
+}
+table{
+	display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 85%;
+}
+
+
+main#home_page{
+    padding-left:2.1em;
+    padding-right:2.1em;
+    display:grid;
+
+    grid-template-columns: 40% 60%;
+    grid-template-areas: 
+    "pictures travel-guides"
+    "regions-title regions-title"
+    "regions regions"
+    "offers-table description"
+    "about-video about-video" 
+    "get-started did-you-know"
+    "contact contact";
+}
+
+video{
+    max-width: 300px;
+}
+
+div#pictures{
+    margin: -1rem;
+    margin-right: unset;
+}
+
+audio{
+    max-width: 200px;
+    padding-left: 0px;
+}
+
+/* stilizare div hotel */
+#gr_hotels{
+    display: block;
+}
+
+
+#butoane_form{
+    display: block;
+}

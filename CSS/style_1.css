@@ -1,0 +1,123 @@
+@font-face{
+    font-family: navFont;
+    src: url(/fonts/RainbowUniverse.ttf);
+   }
+   @font-face {
+       font-family: mainTitleFont;
+       src: url(/fonts/SCRIPTIN.ttf);
+   }
+
+   body{
+       background-image: url(./images/whiteRock2.jpg) ;
+       background-size: auto;
+     
+   }
+   nav{
+       background-color: green;
+       font-family: Comic sans-serif;
+       padding-left: 120px;
+       padding-right: 120px;
+   }
+   nav ul{
+       text-align: center;
+   }
+   nav ul li{
+       display: inline-block;
+       line-height: 80px;
+       margin: 0 15px;
+       color: rgb(180, 248, 79);
+       font-family: navFont;
+       font-size: 30px;
+   }
+
+   #pozaHome{
+       display: block;
+       margin-left: auto;
+       margin-right: auto;
+   }
+   .box{
+    position: relative;
+   }
+   #titleDraw{
+    position: absolute;
+    top: 20px;
+    right: 130px;
+    color: black;
+    font-family: mainTitleFont;
+    font-size: 35px;
+   }
+   #navTitle{
+    font-family: mainTitleFont;
+    color: rgb(180, 248, 79);
+    font-size: 35px;
+    display: inline-block;
+    font-weight: bold;
+   }
+   .subtitlu{
+    font-family: navFont;
+    color: rgb(2, 90, 2);
+    font-size: 45px;
+    text-align: center;
+   }
+   #description{
+       color:black;
+       font-family:'Courier New';
+       font-size: 20px;
+       text-align: justify;
+       padding-left: 40px;
+       padding-right: 40px;
+
+       background-color: rgb(198, 238, 159);
+       border-radius: 14px,14px,14px,14px;            
+   }
+   b{
+       color: rgb(76, 141, 11);
+       font-family: navFont;
+       font-size: 23px;
+   }
+   h3{
+        color: rgb(76, 141, 11);
+        font-family: navFont;
+        font-size: 28px;
+        text-align: center;
+   }
+
+   .container {
+    padding: 2px 16px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.5s;
+  width:400px;
+  height:470px;
+  background-color:rgb(198, 238, 159);
+}
+
+
+
+.container {
+    display: block;
+    width: 100%;
+  }
+  
+  .card {
+    border: 1px solid black;
+    float: left;
+    margin: 27px;
+    padding: 10px 3px;
+  }
+  .card:nth-of-type(4){
+      margin-right: 40px;
+  }
+  .card:nth-of-type(1){
+      margin-left: 40px;
+  }
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  
+}

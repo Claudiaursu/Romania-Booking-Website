@@ -1,0 +1,81 @@
+$nr_imagini: 10;
+
+div.galerie{
+    width:300px;
+    height:300px;
+    border-image: url('/Resources/Images/dynamic_gallery/yellow.jpg') 30 / 19px round;
+    position:relative;
+    overflow:hidden;
+    margin-bottom:5rem;
+
+    figure{
+        width: 300px;
+        height: 300px;
+        position: relative; 
+
+        figcaption{
+            position:absolute;
+            bottom:0;
+            background:rgba(255,255,255,0.7);
+            width:100%;
+            text-align:center;
+        }
+    
+    }
+}
+
+div#galerie1 figure{
+        position:absolute;
+        left:0;
+        top:0;
+        z-index:0;
+        animation-name:gal_exemplu;
+        animation-timing-function:linear;
+        animation-iteration-count:infinite;
+        animation-fill-mode:forwards;
+        animation-duration:30s;	
+        transform-origin:0px center;
+    }
+    
+
+@for $i from 0 to $nr_imagini{
+    div#galerie1 figure:nth-of-type(#{$nr_imagini - $i}){
+        animation-delay: $i*3s;
+    }
+    
+}
+
+@keyframes gal_exemplu{ 
+    0% {z-index:10;opacity:1;} /*perioada 0-5% in care se afiseaza fara efect */
+    1%{
+        clip-path:polygon(0 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 50%, 100% 50%,100% 50% );
+    }
+    3.3%{
+        clip-path: polygon(0 33.33%, 0 0, 100% 0, 100% 100%, 0 100%, 0 66.66%, 100% 66.66%, 100% 33.33% );
+        
+    } 
+    6.6%{
+        clip-path: polygon(0 0,0 0, 100% 0,100% 100%, 0 100%,0 100%, 100% 100%, 100% 0);
+    }
+    10%{
+        z-index:-10;
+        clip-path:polygon(0 50%, 0 0, 100% 0, 10% 100%, 0 100%, 0 50%, 100% 50%,100% 50% );
+
+    }
+    90%{
+        z-index:-10;
+        opacity: 1;
+    }
+    90.01%{
+        z-index:-10;
+        clip-path:polygon(0 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 50%, 100% 50%,100% 50% );
+        opacity: 1;
+    }
+    90.02%{
+        z-index: 0;
+    }
+    100%{
+        opacity: 1;
+        z-index: 0;
+    }
+}

@@ -1,0 +1,103 @@
+html{
+    font-size: 16px;
+    }
+    
+*{ /* resetarea spatierilor */
+    margin:0px;
+    padding:0px;
+    text-indent:0px;
+}
+
+
+@mixin liDetails {
+    list-style-type: none;
+    text-align: center;
+}
+
+@mixin li_a_details {
+    display:block;
+    height:	100%;
+    text-decoration: none;
+    list-style-type: none;
+    color:var(--navTextColor);
+    font-weight: bold;
+    font-family: navFont;
+}
+
+nav{
+    background-color: var(--navColor);
+    width: 100%;
+    height: 3rem;
+
+    label#hamburger{
+        display: none;
+    }
+    
+    ul.menu>li{
+        display: inline-block;
+        width:15%;
+        text-shadow: 0px -40px 5px var(--navTextShadow);
+        font-family: navFont;
+        font-size: 1.8rem;
+        font-weight: bold;
+        color:var(--navTextColor);
+        height: 3rem;
+        line-height: 3rem; 
+        transition: all 0.3s linear;
+        overflow: hidden; 
+        text-align:center;		
+        list-style-type:none;
+        padding-left:0.03rem;
+        :nth-of-type(6){
+            text-shadow: none;
+        }
+        &:hover ul.submenu{
+            display: block;
+        }
+        >a{
+            @include li_a_details();
+            &:hover{
+                background-color: var(--navHover);
+                transition: all 0.3s linear;
+            }
+        }
+
+        >ul.submenu{
+            display: none;
+            position: absolute;
+            /* top:0px; */
+            display: none;
+            z-index: 100;
+            width: 15%;
+
+            >li{
+                display:block;
+                font-size:1.2rem;
+                font-weight:bold;
+                width:100%;
+                height:3rem;
+                line-height: 3rem; 
+                text-align:center;		
+                list-style-type:none;
+                text-shadow: none;
+                border-top:1px solid black;
+                background-color: var(--navColor);
+                :last-child{
+                    border-bottom:1px solid black;
+
+                }
+
+                >a{
+                    @include li_a_details();
+                    &:hover{
+                        background-color:var(--navHover);
+                        transition: all 0.3s linear;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        
+    }
+
+}

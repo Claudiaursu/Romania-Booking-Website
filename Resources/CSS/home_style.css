@@ -1,0 +1,45 @@
+main{
+    padding-left:2.2em;
+    padding-right:2.2em;
+  
+    display:grid;
+
+    grid-template-columns: 20% 30% 25% 25%;
+    grid-template-areas: 
+    "pictures      travel-guides  travel-guides get-started"
+    "offers-table    offers-table   description        contact  "
+    "regions-title regions-title regions-title regions-title"
+    "regions      regions       regions        regions"
+    "about-video  about-video   did-you-know   did-you-know";
+}
+
+#description{
+    grid-area: description;
+}
+#travel-guides{
+    grid-area: travel-guides;
+}
+#about-video{
+    grid-area: about-video;
+}
+#regions{
+    grid-area: regions;
+}
+#pictures{
+    grid-area: pictures;
+}
+#get-started{
+    grid-area: get-started;
+}
+#did-you-know{
+    grid-area: did-you-know;
+}
+#offers-table{
+    grid-area: offers-table;
+}
+#contact{
+    grid-area: contact;
+}
+#regions-title{
+    grid-area: regions-title;
+}

@@ -1,0 +1,143 @@
+html{
+	font-size: 10px;
+}
+body{
+    background-image: url(../Images/home/whiteRock2.jpg) ;
+    background-size: auto;
+    margin:0;
+}
+ main{
+	padding-left:1em;
+	padding-right:1em;
+	display:block;					
+}
+
+#gr{
+display: block;
+}
+
+div#banner{
+	display: none;
+}
+
+ul.menu > li#homeButton {
+	display: none;
+}
+
+ul.menu >li > a {
+	text-decoration: none;
+	list-style-type: none;
+	color: var(--navTextColor);
+	font-weight: bold;
+	font-family: navFont;
+	padding-left: 0px;
+}
+
+ul.menu {
+	display: none;
+}
+
+ul.menu>li>ul.submenu {
+	width: 100%;
+}
+
+nav {
+	position: fixed;
+	z-index: 100;
+	background-color: var(--navColor);
+	top: 0px;
+}
+label#hamburger{
+	display: block;
+	font-size: 3rem;
+}
+#ch-menu:checked~ul.menu{
+	display:block;  
+	animation-name: spaceLetters;
+	animation-duration: 1.2s;
+	animation-fill-mode: forwards;
+}
+#submenu_galleries:checked~ul.submenu{
+	display:block;
+}
+ul.menu>li#homeIcon{
+	width: 100%;
+	text-shadow: none;
+	display: block;
+}
+
+ul.menu > li {
+	--inaltime: 3rem;
+	font-family: navFont;
+	font-size: 2rem;
+	font-weight: bold;
+	color:var(--navTextColor);
+	height: var(--inaltime);
+	line-height: var(--inaltime);
+	background-color: var(--navColor);
+	transition: background 0.7s linear;
+	list-style-type: none;
+	text-align: center;
+	width: 100%;
+	text-shadow: none;
+}
+
+ul.submenu>li{
+	--inaltime: 3rem;
+	font-family: navFont;
+	font-size: 1.2em;
+	font-weight: bold;
+	color:var(--navTextColor);
+	height: var(--inaltime);
+	line-height: var(--inaltime);
+	transition: background 0.7s linear;
+	list-style-type: none;
+	text-align: center;
+	width: 100%;
+	text-shadow: none;
+}
+ul.menu>li>ul.submenu>li{
+	font-size: 1em;
+	border: none;
+}
+
+ul.menu > a {
+	text-decoration: none;
+	list-style-type: none;
+	color: var(--navTextColor);
+	font-weight: bold;
+	font-family: navFont;
+	padding-left: 0px;
+}
+
+table{
+	display: block;
+    overflow-x: auto;
+	white-space: nowrap;
+	width: 80%;
+}
+
+video{
+	max-width: 300px;
+	margin: 0px;
+}
+
+@keyframes spaceLetters{
+	0%{
+		letter-spacing: -6px;
+	}
+	100%{
+		letter-spacing: 2px;
+	}
+}
+audio{
+	max-width: 300px;
+}
+div#input_gr{
+    display: block;
+}
+
+
+#butoane_form{
+	display: block;
+}

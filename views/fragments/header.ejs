@@ -1,0 +1,52 @@
+<nav>
+    <input type="checkbox" id="ch-menu">
+    <label id = "hamburger" for="ch-menu">
+        <span  class="fas fa-bars"></span>
+    </label>
+    <ul class="menu">
+        <li id = "homeIcon"><a href = "/index"><span class="fas fa-home"></span></a></li>
+        <li id = "homeButton"><a href = "/index"><span class="fas fa-home"></span> Home</a></li>
+        <li><a href = "/index#regions">Regions</a></li>
+        <li><a href= "/hotels">Hotels</a></li>
+        <% if((locals.utilizator) && (locals.utilizator.rol == "admin")) { %>
+        <li><a href= "/users">Users</a></li>
+        <% } %>
+        <li><a href = "/create_user">Signup</a></li>
+        <li>
+            <label for="submenu_galleries">Galleries</label>
+            <input class="ch-submenu" type="checkbox" id = "submenu_galleries">
+            <ul class="submenu">
+                <li><a href="/static_gallery#galerie">Static Gallery</a></li>
+                <li><a href="/static_gallery#galerie1">Dynamic Gallery</a></li>
+            </ul>
+        </li>
+        <% if (locals.utilizator) { %>
+            <li><a  href="/chat">Chat</a></li>
+        <% } %>
+        <% if (locals.utilizator) { %>
+            <li>
+                <label for="submenu_galleries">Logged: <%= locals.utilizator.username %></label>
+                <input class="ch-submenu" type="checkbox" id = "submenu_galleries">
+                <ul class="submenu">
+                    <li><a href="/logout">Log out</a></li>
+            </li>
+        <% } %>
+    </ul>
+</nav>
+<div>
+<% if( !locals.utilizator) { %>
+    <form id="login2" method="post" action="/login">
+        <p>
+        <label>
+            Username: <input type="text" name="username" value="">
+        </label>
+        <p/>
+        <p>
+        <label>
+            Parola: <input type="password" name="parola" value="">
+        </label>
+        </p>
+        <input type="submit" value="Submit">
+    </form>
+    <% } %>
+</div>

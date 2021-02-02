@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <%- include('../fragments/head') %>
+    </head>
+	<body>  
+        <header>
+        <%- include('../fragments/headerHome') %>
+        </header>
+        <main id = "home_page">
+    
+            <section id = "description">
+                <h2 class="subtitle">Try the Romanian flavours</h2>
+                <p class="green2"><b>Authentic</b>, <b>Natural</b> and <b>Cultural</b> are the words that best capture the essence of Romania. This website is intended to assist travelers who 
+                    are planning to visit Romania as well as the general public who would like to learn more about one of the most beautiful countries in Europe.
+                We are going to help you find the best places to stay: the most amazaing ones, the uniqes, all at the best price!</p><br/>
+            </section>
+            <section id = "travel-guides">
+                <h2 class = "subtitle">What travel guides say about Romania:</h2>
+                <ul class = "blue">
+                  <li><q>What I like about Romania is that you know you are in a different place, in a good way.</q><br/><cite>(Jayne Clark, USA Today)</cite><br/><br/></li>
+                  <li><q>… why should you go to Romania? The straight answer is because it is one of the most beautiful countries of Southeast Europe.</q><br/><cite>(The Blue Guide)</cite><br/><br/></li>
+                  <li><q>Considered by many the most beautiful country in Eastern-Europe, Romania still claims regions that seem bastions of a medieval past long since lost elsewhere.</q><br/><cite>(Fodor's Eastern and Central Europe)</cite><br/><br/></li>
+                  <li><q>Few regions offer a more dazzling display of cultural and artistic treasures than Romania.</q><br><cite>(Smithsonian Journeys)</cite><br/><br/></li>
+                  <li><q>No journey to Eastern Europe would be complete without paying a visit to Romania… Outstanding landscapes, a huge diversity of wildlife…</q><br/><cite>(The Rough Guide)</cite><br/><br/></li>
+                  <li><q>Romania has majestic castles, medieval towns, great hiking and wildlife…</q><br/><cite>(The Lonely Planet)</cite><br/><br/></li>
+                  <li><q>Romania has a rich cultural and natural diversity. Its dramatic mounatin scenery includes the densely forested Carpathian Mountains, picturesque valley and miles of white sany beaches on the sea coast.</q><br/><cite>(WorldTravelGuide)</cite><br><br></li> 
+                </ul>
+            </section>
+            <section id = about-video>
+                <video class="video" controls="controls">
+                    <source src = "/Video/PresentingVideo.mp4" type="video/mp4">
+                    <track default src = "my_captions2.vtt" kind="captions" srclang="en" label="english"/>
+                </video>
+            </section>
+            <h2 id = "regions-title" class="subtitle">Where can you go?</h2>
+            <div id = "regions">
+                <section id="transilvania">
+                    <h3>Transylvania</h3>
+                    <p class="green"><b>Transylvania</b> is a historical region that is located in central Romania. Bound on the east and south by its natural borders, the Carpathian mountain range, historical Transylvania extended westward to the Apuseni Mountains. The term sometimes encompasses not only Transylvania proper, but also parts of the historical regions of Crișana and Maramureș, and occasionally the Romanian part of Banat. 
+                        The region of Transylvania is known for the scenery of its Carpathian landscape and its rich history. It also contains major cities such as Cluj-Napoca, Brașov, Sibiu, Târgu Mureș, Alba Iulia, and Bistrița.</p><br/>
+                        
+                </section>
+                <section id = "banat">
+                    <h3>Banat and Crisana</h3>
+                    <p class="green">About the name: <b>Crisana</b> is named after the three main rivers in the region: Crisul Alb, Crisul Negru and Crisul Repede. The name <b>Banat</b> comes from the word Ban, the military leader of the region.
+                        Location: Romania's western border - Crisana borders Hungary in the north, and Banat borders Serbia in the south.</p><br/>
+                    <h3>Dobrogea</h3>
+                    <p class="green"><b>Dobrogea</b> region is home to the Danube Delta, a 2,200-square-mile wildlife reserve designated by UNESCO as a "Reservation of the Biosphere;" the ancient port city of Constanta, and the seaside resorts stretching along Romania's 152-mile Black Sea coast. From the port city of Tulcea, day cruises through the Delta's waterways give travelers a glimpse of the abundant wildlife and the traditional fishing villages. 
+                        Floating reed islands, sand dunes and waterways offer shelter to over 300 species of birds, countless fish and 1,150 species of plants.</p><br/>
+    
+                 </section>
+                <section id = "bucovina">
+                    <h3>Bucovina</h3>
+                    <p class="green">Nestled in the rolling hills of northern Moldova is the region of <b>Bucovina</b>, home to one of the world's greatest art treasures: the UNESCO World heritage sites of the Painted Monasteries of Bucovina. Built in the 15th and 16th centuries and featuring colorful exterior frescoes depicting dramatic religious scenes, 
+                        these richly decorated houses of worships are unique in the world.</p><br/>
+                    <h3>Maramures</h3>
+                    <p class="green">The northwestern Romanian region of <b>Maramures</b> is home to many villages where century-old traditions are still part of daily life. The inhabitants of this area have preserved, to an amazing extent, the rural culture 
+                    and crafts of their Dacian ancestors.</p>
+                </section>
+            </div>
+
+            <div id = "pictures">
+                <h2 class="subtitle">Some of the most unusual hotels</h2>
+              
+                <picture>
+                    <source srcset="/Images/home/Balea_lac_mic.png" media="(max-width:480px)"/>
+                    <source srcset="/Images/home/Balea_lac_mediu.jpg" media="(max-width:760px)"/>
+                    <img src="/Images/home/Balea_lac_mare.png" alt = "Balea Lac Ice Hotel" title="Balea Lac Ice Hotel" >
+                    <figcaption>Balea Lac Ice Hotel</figcaption>
+                </picture>
+                <picture>
+                    <source srcset="/Images/home/Harmonie_Tree_Hotel_mic.png" media="(max-width:480px)"/>
+                    <source srcset="/Images/home/Harmonie_Tree_Hotel_mediu.png" media="(max-width:760px)"/>
+                    <img src="/Images/home/Harmonie_Tree_Hotel.png" alt = "A Hotel in trees" title="Harmonie Tree Hotel">
+                    <figcaption>Harmonie Tree Hotel</figcaption>
+                </picture>
+                <picture>
+                    <source srcset="/Images/home/Hotel_Train_mic.png" media="(max-width:480px)"/>
+                    <source srcset="/Images/home/Hotel_Train_mediu.png" media="(max-width:760px)"/>
+                    <img src="/Images/home/Hotel_Train_mare.png" alt = "Hotel in a train" title="Hotel Train">
+                    <figcaption>Hotel Train</figcaption>
+                </picture>
+
+
+            </div>
+            <section id = "get-started">
+                <h2 class="subtitle">How to get started</h2>
+                <section>
+                    <h3>Create your account</h3>
+                    <p class="pink2">It's so simple! Create an account and then you have the freedom to book what reservation you want, to any hotel, in any region or city. You only need to set a few personal information about you and tell us you preferences regarding the way your hotel will be.</p>
+                </section>
+                <section>
+                    <h3>Special Offers for this month!</h3>
+                    <p class="pink2">If you register until <time datetime="2020-10-30">2020-10-30</time> you will get -15 % discount at all kind of bookings! Click  <a class = "special" href = "/pages/login.html">here</a> to make an account!<br/>
+                    If you book in advance with at least 3 months, you will also get a -5% discount!<br/>
+                    Also if you are a loyal customer, you will get more and more discounts!<br/>For more details about our special offers, click <a class = "special" href = "/pages/offers.html">here</a>!
+                    </p>
+                </section>
+            </section>
+            <section id = "did-you-know">
+                <h2 class="subtitle">Did you know that...?</h2>
+                <ul class="blue">
+                    <li>It’s home to the world’s heaviest building: <b>Bucharest’s</b> vast Palace of the Parliament. Guinness World Records recognises it as the heaviest building on the planet.<span class="fas fa-award"></span></li>
+                    <li>Visitors might spot Europe’s largest mammal.Tipping the scales at 1,400lbs, the European bison was nearly hunted to extinction, but in recent years has been reintroduced to several Eastern European countries, including Romania.</li>
+                    <li>Romania is the fifth booziest country in the world, behind four more Eastern European states: Belarus, Russia, Moldova and Lithuania. As the map below shows, the average Romanian consumes 14.4 litres of pure alcohol each year, compared to 11.6 litres in Britain.</li>
+                    <li> Bucharest has one of the world’s prettiest bookshops: Cărturești Carusel opened in 2015 in a restored 19th century building. It contains more than 10,000 books, 5,000 albums and DVDs and a top floor bistro.</li>
+                    <li>Romanians love to dance as much as they love to drink. There are plenty of traditional songs that have specific traditional dances! Usually these dances are danced in a big circle, everyone holding their hands, and it's called a <i lang="ro">horă</i>. Here you can listen to one of the most beloved songs for traditional dances<span class="fas fa-music"></span> :<br/>
+                    <audio controls>
+                        <source src="/Audio/Pindu-Treambura_pamporea.mp3" type="audio/mpeg">
+                    </audio>
+                    </li>
+                </ul>
+            </section>
+            <section id= "offers-table">
+                <h2 class = "subtitle">What do we offer</h2>
+                <div id = "tabel">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Region</th>
+                            <th>Number of hotels/guest houses</th>
+                            <th>The lowest price(per night)</th>
+                            <th>Visitors annually</th>
+                            <th>Number of airports</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Transylvania</td>
+                            <td>1230</td>
+                            <td>170 RON</td>
+                            <td>100700</td>
+                            <td rowspan="2">4</td>
+                        </tr>
+                        <tr>
+                            <td>Banat and Crisana</td>
+                            <td>776</td>
+                            <td>120 RON</td>
+                            <td>80000</td>
+                        </tr>
+                        <tr>
+                            <td>Bucovina</td>
+                            <td>890</td>
+                            <td>190 RON</td>
+                            <td>120300</td>
+                            <td rowspan="2">1</td>
+                        </tr>
+                        <tr>
+                            <td>Oltenia</td>
+                            <td>676</td>
+                            <td>130 RON</td>
+                            <td>83000</td>
+                        </tr>
+                        <tr>
+                            <td>Maramures</td>
+                            <td>1120</td>
+                            <td>190 RON</td>
+                            <td>115500</td>
+                            <td rowspan="4">2</td>
+                        </tr>
+                        <tr>
+                            <td>Moldova</td>
+                            <td>900</td>
+                            <td>150 RON</td>
+                            <td>90000</td>
+                        </tr>
+                        <tr>
+                            <td>Muntenia</td>
+                            <td>1172</td>
+                            <td>100 RON</td>
+                            <td>110000</td>
+                        </tr>
+                        <tr>
+                            <td>Dobrogea</td>
+                            <td>1089</td>
+                            <td>123 RON</td>
+                            <td>300000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </section>
+            <section id = "contact">
+                <h2 class="subtitle">Ask us anything! <span class="far fa-comment-dots"></span></h2>
+                <div class="pink2">
+                <h3>Contact us at:</h3>
+               <address>
+                 <a href="mailto:beautifulRomania@yahoo.com">romania@yahoo.com</a><br/>
+                 <p> 0763203647<br/>
+                  Our location: Bucharest, Regina Elisabeta Street nr. 8, 900123<br/>
+                </p>
+               </address>
+              </div>
+            </section>
+         </main>
+         <footer>
+            <%- include('../fragments/footer') %>
+        </footer>
+	</body>
+</html>

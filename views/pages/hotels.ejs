@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+   <%- include("../fragments/head.ejs") %>
+</head>
+<body>
+<header>
+    <%- include("../fragments/header.ejs") %>
+</header>
+
+
+<main id = "hotels_page">
+    <h1>Hotels</h1>
+    <section id = "inputs">
+        <h2>Tell us what you're looking for:</h2>
+        <label>Region
+            <input id = "i_region" type="text" value = "every region"/>&nbsp
+        </label>
+        <label>Number of stars:
+            2<input id = "i_stars" type ="range" min = "2" max = "5" step = "1" value = "5"/>5 &nbsp
+        </label>
+        <label>Starting price from:
+            <select id = "simple_select">
+                <option value="0">anything</option>
+                <option value="90">90 RON</option>
+                <option value="100">100 RON</option>
+                <option value="110">110 RON</option>
+                <option value="120">120 RON</option>
+                <option value="130">130 RON</option>
+            </select>&nbsp
+        </label>
+        <label>Choose prefered facilities:
+            <select id = "multiple_select" multiple size="4">
+                <option value="TV">TV</option>
+                <option value="pool">Pool</option>
+                <option value="spa">SPA</option>
+                <option value="parking lot">Parking lot</option>
+            </select>
+        </label>
+        <div id = "input_gr">
+            <div>
+                <p>Category:</p>
+                <label>Hotels
+                    <input id = "i_checkbox1" type = "checkbox" name = "category_check" value ="hotel"/>
+                </label><br>
+                <label>Extreme hotels
+                    <input id = "i_checkbox2" type = "checkbox" name = "category_check" value ="extreme hotel"/>
+                </label><br>
+                <label>Luxury hotels
+                    <input id = "i_checkbox3" type = "checkbox" name = "category_check" value ="luxury hotel"/>
+                </label><br>
+                <label>Pensions
+                    <input id = "i_checkbox4" type = "checkbox" name = "category_check" value ="pension"/>
+                </label>
+            </div>
+            <div>
+                <p>Do you want free WiFi ?</p>
+                <label>Yes
+                    <input id = "i_radio1" name = "wifi_radio" type = "radio" value="1">
+                </label><br>
+                <label>No
+                    <input id = "i_radio2" name = "wifi_radio" type = "radio" value="0">
+                </label><br>
+                <label>It doesn't matter
+                    <input id = "i_radio3" name = "wifi_radio" type = "radio" value="2">
+                </label>
+            </div>
+            <div>
+                <p>Tell us some keywords:</p>
+                <label>
+                    <textarea id="i_textarea"></textarea>
+                </label>
+            </div>
+        </div>
+        <button id = "input_filter" class="filter_buttons">Filter</button>
+        <button id = "reset_filter" class="filter_buttons">Reset all filters</button>
+        <button id = "sort_asc" class="filter_buttons">Sort <span class="fas fa-arrow-up"></span></button>
+        <button id = "sort_desc" class="filter_buttons">Sort <span class="fas fa-arrow-down"></span></button>
+        <button id = "average" class = "filter_buttons">See the average price</button>
+        <p><b class = "special">Warning! </b>The sorting is made by the region(alphabetical order) and if the hotels are from the same region, they are sorted by their starting price.</p>
+    </section>
+    <section id = "average_zone">
+        <p></p>
+    </section>
+    <section id = "gr_hotels">
+    <% for(let i = 0; i< locals.hotels.length; i++) { %>
+        <%- include("../fragments/hotel.ejs", {hotel:locals.hotels[i]} ) %>
+        <% } %>
+    </section>
+</main>
+<footer>
+    <%- include("../fragments/footer.ejs") %>
+</footer>
+</body>
+</html>

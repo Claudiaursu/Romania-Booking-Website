@@ -1,0 +1,134 @@
+html{
+    font-size: 16px;
+    }
+    
+*{ /* resetarea spatierilor */
+    margin:0px;
+    padding:0px;
+    text-indent:0px;
+}
+
+label#hamburger{
+    display: none;
+}
+
+#ch-menu, .ch-submenu{
+    display:none;
+}
+  ul.submenu{
+    display:none;
+}
+
+ul.menu>li#homeIcon{
+    display: none;
+} 
+
+nav{
+    width:100%;
+    background-color: var(--navColor);
+}
+
+ul.menu>li{
+ /* float:left; */
+    display: inline-block;
+    width:10%;
+    text-shadow: 0px -40px 5px rgb(15, 83, 15);
+    font-family: navFont;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color:var(--navTextColor);
+    height: 3rem;
+    line-height: 3rem; 
+    transition: all 0.3s linear;
+    overflow: hidden; 
+    text-align:center;		
+    list-style-type:none;
+    padding-left:0.03rem;
+}
+ul.menu>li:last-of-type{
+    width: 20%;
+}
+ul.menu>li:last-of-type>ul.submenu{
+    position: absolute;
+     /* top:0px; */
+    display: none;
+    z-index: 100;
+    width: 20%;
+}
+
+ul.menu>li>ul.submenu>li{
+    display:block;
+    font-size:1.2rem;
+    font-weight:bold;
+    width:100%;
+    height:3rem;
+    line-height: 3rem; 
+    text-align:center;		
+    list-style-type:none;
+    text-shadow: none;
+}
+ul.menu>li>a,ul.menu>li>div,ul.submenu>li>a{
+    display:block;
+    height:	100%;
+    text-decoration: none;
+    list-style-type: none;
+    color:var(--navTextColor);
+    font-weight: bold;
+    font-family: navFont;
+}
+
+
+ul.menu>li>ul.submenu{
+    position: absolute;
+     /* top:0px; */
+    display: none;
+    z-index: 100;
+    width: 10%;
+}
+
+ul.menu>li>ul.submenu>li
+{
+    border-top:1px solid black;
+    background-color: var(--navColor);
+}
+ul.menu>li>ul.submenu>li:last-child
+{
+    border-bottom:1px solid black;
+}
+
+ul.menu>li>a:hover{
+    background-color: rgb(107, 185, 33);
+    transition: all 0.3s linear;
+}
+ul.submenu>li>a:hover{
+    background-color: rgb(107, 185, 33);
+    transition: all 0.3s linear;
+    text-decoration: underline;
+}
+/*
+ul.submenu>li>a:hover ul.menu>li:nth-of-type(6){
+    background-color:purple;
+} */
+
+/* cand venim cu cursorul peste elementele din submeniu
+sa se deselecteze cele din meniu */
+/*
+ul.menu>li>ul.submenu>li:hover ul.menu>li:nth-of-type(6){
+    background-color: var(--navColor);
+    transition: all 0.3s linear;
+} */
+
+ul.menu>li:nth-of-type(6){
+    text-shadow: none;
+}
+
+ul.menu>li:hover{
+   /* overflow:visible; */
+    background-color: rgb(107, 185, 33);
+    transition: all 0.3s linear;
+    text-shadow: 0px 0px 5px rgb(15, 83, 15);
+}
+
+ul.menu>li:hover ul.submenu{
+    display: block;
+}

@@ -1,0 +1,25 @@
+<article class = "hotel" id = "artc-<%= hotel.id_hotel%>" name = "<%= hotel.categorie %>" >
+    <h3 class = "titlu_hotel"><%= hotel.nume %></h3>
+    <div id = "container_hotel">
+        <div class = "details_col">
+            <img src = "<%=hotel.imagine%>" alt="<%=hotel.nume%>" />
+            <ul>
+                <li class = "price"><b>Minimum price: </b><%= hotel.pret_minim %> RON</li>
+                <li class = "region"><b>Region: </b><%= hotel.regiune %></li>
+                <li class= "facilities"><b>Facilities: </b><%= hotel.facilitati %></li>
+                <li class = "open_date">
+                    <b>Opened since: </b><time><%= hotel.data_inaugurare %></time>
+                </li>
+                <li class = "wifi"><b>Free WiFi: </b><%= hotel.wifi %></li>
+            </ul>
+        </div>
+
+        <div class="details_col">
+            <ul>
+                <li class = "category"><b>Category: </b><%=hotel.categorie %></li>
+                <li class = "stars"><b>Stars: </b><%=hotel.nr_stele %></li>
+                <li class= "description"><b>Description: </b><%=hotel.descriere %></li>
+            </ul>
+        </div>
+    </div>
+</article>
